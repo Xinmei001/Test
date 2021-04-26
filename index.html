@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"> 
+    <link rel="stylesheet" type="text/css" href="./CSS/global.css"> -->
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Sydney & Xinmei">
+    <title> Find Your Cure </title>
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">YOUR COVID CURE</a></h1>
+        <nav class=header-nav>
+            <a href="library.html">Library</a>
+            <a href="about.html"> About Us </a>
+        </nav>
+    </header>
+
+    <form id="quiz" class="container">
+        <div class="start-page">
+            <div id="page-text" class="page-text">
+                <h1>How are you,<span class="italic">  Really ?</span></h1>
+                <h1>Tell us how you've been feeling..</h1>
+                <div class="start-button"><button type="button" onclick="startQuiz()">START!</button></div>
+            </div>
+            </div>
+        </div>
+        <div class="questionnaire" style="display: none;">
+            <ul class="carousel">
+                <div class="slide">
+                    <li>1) On average, how often are you bothered by feeling nervous, anxious or on edge?</li>
+                    <div class="flex-container">
+                        <input type="radio" id="radio-1" name="q1" value="1">
+                        <label for="radio-1">Never</label>
+                        <input type="radio" id="radio-2" name="q1" value="2">
+                        <label for="radio-2">A few times a month</label>
+                        <input type="radio" id="radio-3" name="q1" value="3">
+                        <label for="radio-3">A few times a week</label>
+                        <input type="radio" id="radio-4" name="q1" value="4">
+                        <label for="radio-4">Most days of the week</label>
+                        <input type="radio" id="radio-5" name="q1" value="5">
+                        <label for="radio-5">Every day of the week</label>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <li>2) How often do you feel as though your level of worrying have a negative impact on your
+                        productivity (ie. at work, at school)?</li>
+                    <div class="flex-container">
+                        <input type="radio" id="radio-6" name="q2" value="1">
+                        <label for="radio-6">Never</label>
+                        <input type="radio" id="radio-7" name="q2" value="2">
+                        <label for="radio-7">A few times a month</label>
+                        <input type="radio" id="radio-8" name="q2" value="3">
+                        <label for="radio-8">A few times a week</label>
+                        <input type="radio" id="radio-9" name="q2" value="4">
+                        <label for="radio-9">Most days of the week</label>
+                        <input type="radio" id="radio-10" name="q2" value="5">
+                        <label for="radio-10">Every day of the week</label>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <li>3) How often does your level of worrying have a negative impact on your social life?</li>
+                    <div class="flex-container">
+                        <input type="radio" id="radio-11" name="q3" value="1">
+                        <label for="radio-11">Never</label>
+                        <input type="radio" id="radio-12" name="q3" value="2">
+                        <label for="radio-12">A few times a month</label>
+                        <input type="radio" id="radio-13" name="q3" value="3">
+                        <label for="radio-13">A few times a week</label>
+                        <input type="radio" id="radio-14" name="q3" value="4">
+                        <label for="radio-14">Most days of the week</label>
+                        <input type="radio" id="radio-15" name="q3" value="5">
+                        <label for="radio-15">Every day of the week</label>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <li>4) How often do your levels of worrying or anxiousness feel "out of control?"</li>
+                    <div class="flex-container">
+                        <input type="radio" id="radio-16" name="q4" value="1">
+                        <label for="radio-16">Never</label>
+                        <input type="radio" id="radio-17" name="q4" value="2">
+                        <label for="radio-17">A few times a month</label>
+                        <input type="radio" id="radio-18" name="q4" value="3">
+                        <label for="radio-18">A few times a week</label>
+                        <input type="radio" id="radio-19" name="q4" value="4">
+                        <label for="radio-19">Most days of the week</label>
+                        <input type="radio" id="radio-20" name="q4" value="5">
+                        <label for="radio-20">Every day of the week</label>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <li>5) How often do you feel so anxious that your body is physically restless (ie. rapid heart rate,
+                        jittery feelings, etc.)?</li>
+                    <div class="flex-container">
+                        <input type="radio" id="radio-21" name="q5" value="1">
+                        <label for="radio-21">Never</label>
+                        <input type="radio" id="radio-22" name="q5" value="2">
+                        <label for="radio-22">A few times a month</label>
+                        <input type="radio" id="radio-23" name="q5" value="3">
+                        <label for="radio-23">A few times a week</label>
+                        <input type="radio" id="radio-24" name="q5" value="4">
+                        <label for="radio-24">Most days of the week</label>
+                        <input type="radio" id="radio-25" name="q5" value="5">
+                        <label for="radio-25">Every day of the week</label>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <li>6) How often do you feel as though you are easily annoyed or irritable?</li>
+                    <div class="flex-container">
+                        <input type="radio" id="radio-26" name="q6" value="1">
+                        <label for="radio-26">Never</label>
+                        <input type="radio" id="radio-27" name="q6" value="2">
+                        <label for="radio-27">A few times a month</label>
+                        <input type="radio" id="radio-28" name="q6" value="3">
+                        <label for="radio-28">A few times a week</label>
+                        <input type="radio" id="radio-29" name="q6" value="4">
+                        <label for="radio-29">Most days of the week</label>
+                        <input type="radio" id="radio-30" name="q6" value="5">
+                        <label for="radio-30">Every day of the week</label>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <li>7) How often do you feel "down" or overall unhappy?</li>
+                    <div class="flex-container">
+                        <input type="radio" id="radio-31" name="q7" value="1">
+                        <label for="radio-31">Never</label>
+                        <input type="radio" id="radio-32" name="q7" value="2">
+                        <label for="radio-32">A few times a month</label>
+                        <input type="radio" id="radio-33" name="q7" value="3">
+                        <label for="radio-33">A few times a week</label>
+                        <input type="radio" id="radio-34" name="q7" value="4">
+                        <label for="radio-34">Most days of the week</label>
+                        <input type="radio" id="radio-35" name="q7" value="5">
+                        <label for="radio-35">Every day of the week</label>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <li>8) How often do your levels of sadness or unhappiness hinder your productivity?</li>
+                    <div class="flex-container">
+                        <input type="radio" id="radio-36" name="q8" value="1">
+                        <label for="radio-36">Never</label>
+                        <input type="radio" id="radio-37" name="q8" value="2">
+                        <label for="radio-37">A few times a month</label>
+                        <input type="radio" id="radio-38" name="q8" value="3">
+                        <label for="radio-38">A few times a week</label>
+                        <input type="radio" id="radio-39" name="q8" value="4">
+                        <label for="radio-39">Most days of the week</label>
+                        <input type="radio" id="radio-40" name="q8" value="5">
+                        <label for="radio-40">Every day of the week</label>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <li>9) How often do your levels of sadness or unhappiness get in the way of your social life?</li>
+                    <div class="flex-container">
+                        <input type="radio" id="radio-41" name="q9" value="1">
+                        <label for="radio-41">Never</label>
+                        <input type="radio" id="radio-42" name="q9" value="2">
+                        <label for="radio-42">A few times a month</label>
+                        <input type="radio" id="radio-43" name="q9" value="3">
+                        <label for="radio-43">A few times a week</label>
+                        <input type="radio" id="radio-44" name="q9" value="4">
+                        <label for="radio-44">Most days of the week</label>
+                        <input type="radio" id="radio-45" name="q9" value="5">
+                        <label for="radio-45">Every day of the week</label>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <li>10) How often do experience feelings of low self esteem or self-hatred?</li>
+                    <div class="flex-container">
+                        <input type="radio" id="radio-46" name="q10" value="1">
+                        <label for="radio-46">Never</label>
+                        <input type="radio" id="radio-47" name="q10" value="2">
+                        <label for="radio-47">A few times a month</label>
+                        <input type="radio" id="radio-48" name="q10" value="3">
+                        <label for="radio-48">A few times a week</label>
+                        <input type="radio" id="radio-49" name="q10" value="4">
+                        <label for="radio-49">Most days of the week</label>
+                        <input type="radio" id="radio-50" name="q10" value="5">
+                        <label for="radio-50">Every day of the week</label>
+                    </div>
+                </div>
+            </ul>
+            <div class="pagination">
+                <div>
+                    <span class="pagination-bullet"></span>
+                    <span class="pagination-bullet"></span>
+                    <span class="pagination-bullet"></span>
+                    <span class="pagination-bullet"></span>
+                    <span class="pagination-bullet"></span>
+                    <span class="pagination-bullet"></span>
+                    <span class="pagination-bullet"></span>
+                    <span class="pagination-bullet"></span>
+                    <span class="pagination-bullet"></span>
+                    <span class="pagination-bullet"></span>
+                </div>
+            </div>
+            <div class="btn-container" id="page-text">
+                <!-- <a id="previous" onclick="plusSlides(-1)">Back</a>
+                <a id="next" onclick="plusSlides(1)">Next</a> -->
+                <button id="submit" type="button" disabled onclick="questionSubmit()">Find My Cure!</button>
+            </div>
+        </div>
+        <section class="result-page">
+            <h3 class="results-info">Your Self Care Prescription:</h3>
+            <h2 class="score">#</h2>
+            <h4>Interpretation:</h4>
+            <p class="result-text"></p>
+            <h5 class="final_words">Thank you for choosing to take the My Covid Cure quiz today.</h5>
+            <button class="retake-button" type="button" onclick="retakeBtn()">Take it again</button>
+        </section>
+    </form>
+
+
+    <div class="footer" id="fixed">
+        <footer id="footer-nav">
+            <a href="https://docs.google.com/document/d/1_1W6V_wvjbzkNfIy-wiBTtr-7hOukEPhQtBxFsRfFwU/edit?ts=60269a54">Project Proposal</a>
+            <a href="https://docs.google.com/drawings/d/1BqIU9eiJu3LR8rWyTGHLzwK6JrTRe-6Cjl1eIYCKXXU/edit?ts=605782b1">Wireframes</a>
+            <a href="https://docs.google.com/document/d/1vvSx8zXNRDPrjrswry_EXj3Zc2t5rIZCVFDo7rAt5Vc/edit">UX Report</a>
+            <a href="https://docs.google.com/document/d/1beE9ZjRBibtlRJuZtiZMdsb6v3fy3R6Ee344zszTbSI/edit?usp=sharing#">Design Documentation</a>
+        </footer>
+    </div>
+
+
+
+
+    <script src="scripts/quiz.js"></script>
+</body>
+
+</html>
