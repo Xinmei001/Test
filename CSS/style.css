@@ -1,4 +1,3 @@
-
 html {
   min-width: 360px;
   box-sizing: border-box;
@@ -23,6 +22,7 @@ body {
 
 h1 {
   margin-top: 1.6em;
+  color: black;
 }
 
 header {
@@ -33,12 +33,12 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: lightblue;
+  background-color:#fff;
+  color: steelblue;
   z-index: 5;
-  box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.35);
+  box-shadow: 0 2px 5px 0 steelblue);
   margin-top: -3em;
   padding-top: 2em;
-  color: #333333;
   padding: 0 4em;
 }
 
@@ -53,7 +53,7 @@ ul {
 }
 
 li {
-  color: #333333;
+  color: steelblue;
   font-size: 1.25em;
   font-weight: bold;
   margin-bottom: .5em;
@@ -62,7 +62,7 @@ li {
 
 a {
   text-decoration: none;
-  color: #333333;
+  color: steelblue;
 }
 
 header:hover {
@@ -78,11 +78,12 @@ header:hover {
 .header-nav a {
   margin-left: 1.6em;
   font-size: 1.25em;
-  border-bottom: 2px solid #48bf91;
+  border-bottom: 2px solid steelblue;
 }
 
-.header-nav a:hover{
-  color: #b8b3b3;
+.header-nav a:hover {
+  background-color: steelblue;
+  color: #fff;
   transition: 0.2s;
 }
 
@@ -102,11 +103,11 @@ header:hover {
 
 #footer-nav>a {
   text-transform: uppercase;
-  color: #333333;
+  color: steelblue;
   box-sizing: border-box;
   font-size: 0.7em;
   letter-spacing: 1px;
-  border-bottom: 2px solid #48bf91;
+  border-bottom: 2px solid steelblue;
   background: white;
   padding-bottom: 0.5em;
   padding-right: 0em;
@@ -129,6 +130,8 @@ header:hover {
   }
 }
 
+/* Here begins the css code for quiz */
+
 .container {
   position: relative;
   padding: 5em;
@@ -136,34 +139,33 @@ header:hover {
   padding-bottom: 3em;
   min-height: calc(100% - 3em);
   line-height: 1.5em;
-  background: linear-gradient(120deg, #829bff, #48bf91);
+  background: linear-gradient(120deg, steelblue, lemonchiffon);
 }
 
-.page-text{
-  background-image:url(images/main.jpg);
-  background-size: contain;
+.page-text {
+  background-image: url(../images/main.jpg);
   padding-top: 3em;
   padding-bottom: 40em;
-  padding-left:3em;
+  padding-left: 3em;
 }
 
-.page-text h1{
-  color:white;
+.page-text h1 {
+  color: white;
 }
 
-.italic{
+.italic {
   font-style: italic;
 }
 
 .start-page button {
   margin-left: 2em;
-  margin-top:5em;
+  margin-top: 5em;
   height: 40px;
   line-height: 40px;
   padding: 0 0.8em;
   background: none;
   cursor: pointer;
-  color:#fff;
+  color: #fff;
   font-size: 1.5em;
   transition: 0.25s linear, 0.25s linear color;
   text-decoration: none;
@@ -171,10 +173,15 @@ header:hover {
   border: 1px solid #fff;
 }
 
-.start-page button:hover{
-transform: scale(1.2,1.2);
-background-color:#829bff;
+.start-page button:hover {
+  transform: scale(1.2, 1.2);
+  background-color: powderblue;
+  color: lemonchiffon;
+  font-style: bold;
+  border-color: lemonchiffon;
+  box-shadow: 0px 4px;
 }
+
 .questionnaire {
   position: relative;
 }
@@ -223,7 +230,7 @@ background-color:#829bff;
 
 .pagination .swiper-pagination-bullet-active {
   opacity: 1;
-  background: gold;
+  background: steelblue;
 }
 
 .btn-container {
@@ -236,21 +243,20 @@ background-color:#829bff;
 }
 
 .btn-container button {
-  color: gold;
+  color: lemonchiffon;
   height: 40px;
   line-height: 40px;
   padding: 0 1em;
   background: none;
   border-radius: 50px;
-  border: 1px solid gold;
+  border: 1px solid lemonchiffon;
 }
 
 button.submit-active {
-  transition:1s;
-  color:white;
-  background-color: gold;
-  transform:scale(1.2,1.2) ;
-
+  transition: 1s;
+  color: white;
+  background-color: steelblue;
+  transform: scale(1.2, 1.2);
 }
 
 .retake-button {
@@ -258,21 +264,28 @@ button.submit-active {
   height: 40px;
   line-height: 40px;
   padding: 0 0.8em;
-  background: gold;
+  background: lemonchiffon;
   cursor: pointer;
-  color: #fff;
+  color: steelblue;
   transition: 0.25s linear background, 0.25s linear color;
   text-decoration: none;
   border-radius: 50px;
-  border: 1px solid gold;
+  border: 1px solid lemonchiffon;
+}
+
+.retake-button:hover {
+  transition: 1s;
+  color: white;
+  background-color: steelblue;
+  transform: scale(1.2, 1.2)
 }
 
 .slide {
   display: block;
-  position:relative;
+  position: relative;
   box-sizing: border-box;
-  background-color: white;
-  border: 10px rgb(216, 184, 43) solid;
+  background-color: lemonchiffon;
+  border: 10px steelblue solid;
   border-radius: 15px;
   width: 60%;
   /* height: 200px; */
@@ -285,6 +298,7 @@ button.submit-active {
 .slide li {
   padding: 2em 2em 0;
 }
+
 .flex-container {
   display: flex;
   flex-flow: row wrap;
@@ -310,12 +324,12 @@ input[type="radio"]+label {
   letter-spacing: 1px;
   text-transform: uppercase;
   font-size: 0.9em;
-  color: #333333;
+  color: steelblue;
   background-color: lemonchiffon;
 }
 
 input:hover+label {
-  background-color:gold;
+  background-color: gold;
   border-radius: 15px;
   transition: 0.2s;
 }
@@ -336,21 +350,22 @@ input:checked+label {
   padding: 2em 0;
   text-align: center;
   background-color: white;
-  border: 10px rgb(216, 184, 43) solid;
+  border: 10px steelblue solid;
   border-radius: 15px;
 }
+
 .result-page h4 {
   text-align: left;
   margin-top: 1em;
   padding-left: 1em;
 }
+
 .result-text {
   /* text-indent: 20px; */
   text-indent: 2em;
   padding: 1em 2em;
   text-align: left;
 }
-
 
 @media screen and (max-width: 600px) {
   .page-text h1 {
@@ -361,7 +376,7 @@ input:checked+label {
     width: 100%;
     text-align: center;
   }
-  .start-button button{
+  .start-button button {
     margin-left: 1em;
   }
   .container {
@@ -395,16 +410,20 @@ input:checked+label {
   }
 }
 
+/* Here begins the css code for method page */
+
 .libcontainer {
   margin-top: 8em;
   padding-top: 3em;
   padding: 3em 8em 0;
   min-height: calc(100%);
-  background: linear-gradient(120deg, #829bff, #48bf91);
+  background: linear-gradient(120deg, steelblue, lemonchiffon);
 }
 
 .banner-text {
   text-align: center;
+  width: 60%;
+  margin: auto;
 }
 
 .banner-text h1 {
@@ -412,20 +431,23 @@ input:checked+label {
   padding: 0.1em 0.2em;
   border: 1px solid #000;
   box-shadow: 3px 3px 3px 0 rgba(3, 6, 26, 0.35);
-  text-align:center;
+  text-align: center;
 }
 
 .banner-text p {
   margin-top: 2em;
-  text-align:left;
+  text-align: left;
 }
 
 .banner-text a {
-  text-decoration:underline;
+  text-decoration: underline;
+  color: lemonchiffon;
 }
-.banner-text a:hover{
-  color:gold;
+
+.banner-text a:hover {
+  color: gold;
 }
+
 .card-list {
   margin-top: 2em;
   padding: 0 8em;
@@ -441,13 +463,22 @@ input:checked+label {
 
 .card-item:nth-child(odd) {
   /* background-color: skyblue; */
-  margin-right: 3%;
+  /* margin-right: 3%; */
 }
 
 .card-content {
   display: flex;
   align-items: center;
-  background-color: pink;
+  margin-left: 1em;
+  margin-right: 1em;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+  border-radius: 12px;
+}
+
+.card-content:hover {
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+  transform: translate3D(0, -2px, 0);
 }
 
 .card-item:nth-last-child(1) .card-content {
@@ -476,7 +507,6 @@ input:checked+label {
   flex: 1;
   text-transform: uppercase;
   font-weight: bold;
-
   text-overflow: -o-ellipsis-lastline;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -488,13 +518,14 @@ input:checked+label {
 @media screen and (max-width: 1100px) {
   .container {
     padding: 3em 4em 0;
+    padding-top: 12em;
   }
   .card-list {
     margin-top: 0em;
     padding: 0 3em 0;
   }
   .card-item {
-    margin-top:2em;
+    margin-top: 2em;
     width: 100%;
   }
 }
@@ -502,11 +533,18 @@ input:checked+label {
 @media screen and (max-width: 600px) {
   .container {
     padding: 3em 1em 0;
+    padding-bottom: 1em;
+    margin-top: 9em;
+  }
+  .libcontainer {
+    padding-top: 11em;
   }
   .card-list {
     padding: 0;
   }
 }
+
+/* Here begins the css code for about-us page */
 
 .biocontainer {
   width: 100%;
@@ -514,7 +552,11 @@ input:checked+label {
   padding-top: 3em;
   padding: 3em 16em 8em;
   min-height: calc(100%);
-  background: linear-gradient(120deg, #829bff, #48bf91);
+  background: linear-gradient(120deg, steelblue, lemonchiffon);
+}
+
+.bio-content: {
+  margin: auto;
 }
 
 .part-1 {
@@ -535,9 +577,13 @@ input:checked+label {
 }
 
 .part-2 {
+  max-width: 80%;
   display: flex;
+  justify-content: center;
+  margin: auto;
+  /* margin-left: auto; */
   margin-top: 4em;
-  margin-bottom: 8em;
+  margin-bottom: 2em;
 }
 
 .part-2 .picture img {
@@ -546,7 +592,7 @@ input:checked+label {
   height: 100%;
   max-width: 24em;
   max-height: 26em;
-  box-shadow: 7px 7px 1px 0 skyblue;
+  box-shadow: 7px 7px 1px 0 #ff9a9e;
 }
 
 .part-2 .info {
@@ -558,15 +604,20 @@ input:checked+label {
   padding: 6em 8em;
   background-color: #232327;
   text-align: center;
-  color:white;
+  color: white;
+  max-width: 30em;
 }
 
-.white{
-  color:white;
+.green {
+  color: skyblue;
 }
 
-.green{
-  color:teal;
+.pink {
+  color: #ff9a9e;
+}
+
+.s-bio {
+  margin-top: 1em;
 }
 
 .part-2 .info .title-2 {
@@ -581,10 +632,15 @@ input:checked+label {
 }
 
 .part-4 {
+  width: 80%;
   position: relative;
   bottom: 1em;
   display: flex;
+  justify-content: center;
   margin-top: 4em;
+  margin: auto;
+  /* margin-left: auto; */
+  /* margin-right:auto; */
 }
 
 .part-4 .picture img {
@@ -606,7 +662,7 @@ input:checked+label {
   background-color: #232327;
   color: #fff;
   text-align: center;
-  margin-bottom: 6em;
+  max-width: 30em;
 }
 
 .part-4 .info .title-2 {
@@ -620,16 +676,37 @@ input:checked+label {
   margin-bottom: 1em;
 }
 
-
+.creators-biotext {
+  max-width: 65%;
+  text-align: justify;
+  margin: 2em auto;
+}
 
 @media screen and (max-width: 1100px) {
-  .container {
+  .biocontainer {
     padding: 0;
+  }
+  .creators-biotext {
+    padding-bottom: 1em;
+  }
+  .libcontainer {
+    padding: 0;
+    padding-top: 8em;
+  }
+  .banner-text {
+    width: 90%;
+  }
+  .result-page {
+    margin-top: 0;
+  }
+  .container {
+    padding-bottom: 1em;
   }
   .part-2 {
     display: block;
     margin-bottom: 1em;
     /* text-align: center; */
+    margin: auto;
     margin-top: 2em;
     margin-bottom: 0em;
   }
@@ -650,6 +727,7 @@ input:checked+label {
   }
   .part-2 .info {
     width: 80%;
+    max-width: none;
     /* position: relative; */
     left: 0em;
     bottom: 0em;
@@ -711,6 +789,7 @@ input:checked+label {
     /* position: relative; */
     /* bottom: 0em; */
     display: block;
+    margin: auto;
     margin-top: 2em;
     text-align: center;
   }
@@ -728,31 +807,22 @@ input:checked+label {
     max-height: none;
     box-shadow: 7px 7px 1px 0 skyblue;
   }
-  
   .part-4 .info {
     width: 80%;
     margin: auto;
     left: 0em;
     bottom: 0em;
     padding: 1em;
-    margin-bottom: 0em;
+    margin-bottom: 1em;
+    max-width: none;
   }
-  
   .part-4 .info .title-2 {
     display: inline-block;
     padding: 0.2em 1em;
     margin: 1em 0;
     border: 2px solid #fff;
   }
-  
   .part-4 .info .title-3 {
     margin-bottom: 1em;
   }
 }
-
-@media screen and (max-width: 600px) {
-  .container {
-    margin-top: 9em;
-  }
-}
-
